@@ -7,7 +7,7 @@ const inter = Inter({ subsets: ['latin'] })
 export default function Home() {
   return (<>
     <Head>
-      <title>The Social Beez | Kick start your buisness growth!</title>
+      <title>TheSocialBeez</title>
       <link rel="shortcut icon" href="favicon-comb.png" type="image/x-icon" />
 
     </Head>
