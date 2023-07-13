@@ -8,17 +8,6 @@ module.exports = {
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
     './src/styles/globals.css',
   ],
-  theme: {
-    colors: {
-      'honey-500': '#fcb404',
-      black: colors.black,
-      white: colors.white,
-      gray: colors.gray,
-      emerald: colors.emerald,
-      indigo: colors.indigo,
-      yellow: colors.yellow,
-      blue: colors.blue,
-    },
-  },
+  theme: {},
   plugins: [],
 }

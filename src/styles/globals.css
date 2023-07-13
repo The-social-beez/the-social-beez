@@ -3,5 +3,9 @@
 @tailwind utilities;
 
 .wrapper {
-    @apply max-w-4xl
+    @apply max-w-4xl;
+}
+
+.bg-red{
+    @apply bg-rose-500;
 }
