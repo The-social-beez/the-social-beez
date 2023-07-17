@@ -1,0 +1,45 @@
+/* Header styles */
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+/* .side { */
+    /* @apply grid h-[100vh] overflow-hidden place-items-center absolute w-full */
+/* } */
+
+.side .title {
+    font-family: "Montserrat", sans-serif;
+    @apply text-7xl font-extrabold my-0 mx-[6vw] w-[90vw];
+}
+
+.side .fancy {
+    font-family: "Lobster", cursive;
+    /* font-size: 1em; */
+    line-height: 0.6em;
+}
+
+.left_side {
+    @apply grid h-[100vh] overflow-hidden place-items-center absolute w-full;
+    background-color: #25BDBE;
+    /* width: 60%; */
+    z-index: 2;
+}
+
+.left_side .title {
+    color: white;
+}
+
+.left_side .fancy {
+    color: #fcb405;
+}
+
+.right_side {
+    @apply grid h-[100vh] overflow-hidden place-items-center absolute w-full;
+    background-color: #fcb405;
+}
+
+.right_side .title {
+    color: white;
+}
+
+.right_side .fancy {
+    color: black;
+}

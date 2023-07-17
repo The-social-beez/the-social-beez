@@ -1,4 +1,5 @@
 // import Image from 'next/image'
+import Header from '@/components/Header/Header'
 import WhatsappIcon from '@/components/Whatsapp-icon/WhatsappIcon'
 import { Inter } from 'next/font/google'
 import Head from 'next/head'
@@ -16,7 +17,7 @@ export default function Home() {
     </Head>
 
     <main className="">
-      <h1 className="text-2xl text-center font-bold">Home</h1>
+      <Header />
     </main>
   </>
   )
