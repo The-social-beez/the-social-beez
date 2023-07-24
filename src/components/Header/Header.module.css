@@ -1,25 +1,32 @@
 /* Header styles */
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Hindi:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
 
 /* .side { */
-    /* @apply grid h-[100vh] overflow-hidden place-items-center absolute w-full */
+    /* @apply grid h-[80vh] md:h-[100vh] overflow-hidden place-items-center absolute w-full */
 /* } */
+/* pink -> ff738e */
 
-.side .title {
+.right_side .title,
+.left_side .title {
     font-family: "Montserrat", sans-serif;
-    @apply text-7xl font-extrabold my-0 mx-[6vw] w-[90vw];
+    @apply text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl 2xl:text-[6rem] font-extrabold my-0 mx-[6vw] w-[90vw]
+    flex flex-col;
+    /* tracking-tighter [word-spacing:0rem]; */
 }
 
-.side .fancy {
-    font-family: "Lobster", cursive;
-    /* font-size: 1em; */
-    line-height: 0.6em;
+.right_side .fancy,
+.left_side .fancy {
+    font-family: "Permanent Marker", cursive;
+    font-size: 1.1em;
+    @apply xs:py-2 sm:py-4 md:py-7
 }
 
 .left_side {
-    @apply grid h-[100vh] overflow-hidden place-items-center absolute w-full;
+    @apply grid h-[80vh] md:h-[100vh] overflow-hidden place-items-center absolute w-full;
     background-color: #25BDBE;
-    /* width: 60%; */
     z-index: 2;
 }
 
@@ -28,18 +35,20 @@
 }
 
 .left_side .fancy {
-    color: #fcb405;
+    color: black;
 }
 
 .right_side {
-    @apply grid h-[100vh] overflow-hidden place-items-center absolute w-full;
+    @apply grid h-[80vh] md:h-[100vh] overflow-hidden place-items-center absolute w-full;
     background-color: #fcb405;
 }
 
 .right_side .title {
-    color: white;
+    color: black;
 }
 
 .right_side .fancy {
-    color: black;
+    color: white;
+    font-family: 'Tiro Devanagari Hindi', serif;
+    @apply md:pt-10 md:pb-4
 }

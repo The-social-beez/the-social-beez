@@ -1,0 +1,32 @@
+/* opan sans */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+/* Josefin sans */
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600;700&display=swap');
+
+@font-face {
+    font-family: Glacial Indifference;
+    src: url(/glacial-indifference/GlacialIndifference-Regular.otf);
+}
+
+.about_us {
+    @apply bg-[#fef3ea] relative px-16 py-24
+}
+
+.about_us__h2 {
+    @apply text-6xl font-bold absolute left-0 text-center top-16 w-full
+}
+
+.about_us__div {
+    @apply border-[#ffd93b] border-[3rem] p-16 flex flex-col justify-center min-h-[36rem] bg-white 
+}
+
+.about_us__div p{
+    
+    font-family: 'Glacial Indifference', sans-serif;
+    @apply text-3xl text-center [word-spacing:0.5rem] leading-[2]
+}
+
+.about_us__div em{
+    font-family: 'Open Sans', sans-serif;
+    @apply text-[#00c4cc] not-italic font-semibold
+}

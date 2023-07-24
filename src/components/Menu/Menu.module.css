@@ -1,0 +1,37 @@
+/* opan sans */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap');
+
+.menu {
+    @apply absolute z-[101] h-screen w-full grid grid-rows-2 md:grid-rows-1 grid-cols-1 md:grid-cols-2;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.menu_close{
+    display: none;
+}
+
+.menu .left{
+    @apply bg-[#EDEDED] md:bg-[#333333] flex justify-center items-center
+}
+
+.menu .left ul{
+    @apply text-black md:text-white text-center text-2xl md:text-3xl lg:text-5xl font-semibold md:font-bold
+}
+
+.menu .left ul li{
+    transition: color 200ms ease-in-out;
+    @apply hover:text-[#fcb405] underline md:no-underline leading-[2] md:leading-[1.75]
+}
+
+.menu .right{
+    @apply bg-[#333333] md:bg-[#EDEDED] text-[#ededed] md:text-black relative p-4 pt-[20vh] md:pt-[50vh]
+}
+
+.menu .right h3{
+    @apply text-center text-2xl md:text-4xl lg:text-5xl font-semibold -translate-y-[50%] mb-16
+}
+
+.menu .right ul{
+    @apply flex justify-center gap-2 text-2xl lg:text-3xl
+}
+

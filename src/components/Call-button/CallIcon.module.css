@@ -5,15 +5,15 @@
 /* whatsapp icon */
 .whatsapp_icon {
     position: fixed;
-    bottom: 0;
+    bottom: 4.25rem;
     right: 0;
     margin: 1rem;
-    z-index: 9999;
+    z-index: 100;
 }
 
 .whatsapp_icon button {
     border: none;
-    background: #25D366;
+    background: #15b2f7;
 
     border-radius: 2rem;
     width: 3.5rem;
@@ -21,12 +21,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    /* border: 4px solid white; */
 }
 
 .whatsapp_icon button a {
     display: flex;
-    font-size: 2rem;
+    font-size: 1.5rem;
     text-decoration: none;
     color: #ffffff;
-    background: #25D366;
+    background: #15b2f7;
 }
