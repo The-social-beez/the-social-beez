@@ -1,12 +1,11 @@
 /* Header styles */
-@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Hindi:ital@1&display=swap');
+/* MARATHI */
+@import url('https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Marathi:ital@0;1&display=swap');
+/* Permanant marker */
 @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+/* Monterserrat */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
 
-/* .side { */
-    /* @apply grid h-[80vh] md:h-[100vh] overflow-hidden place-items-center absolute w-full */
-/* } */
 /* pink -> ff738e */
 
 .right_side .title,
@@ -49,6 +48,7 @@
 
 .right_side .fancy {
     color: white;
-    font-family: 'Tiro Devanagari Hindi', serif;
-    @apply md:pt-10 md:pb-4
+    /* font-family: 'Tiro Devanagari Hindi', serif; */
+    font-family: 'Tiro Devanagari Marathi', serif;
+    @apply md:pt-10 md:pb-4 italic;
 }
