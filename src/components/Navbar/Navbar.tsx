@@ -1,30 +1,49 @@
 // import Link from 'next/link'
 import { HiMenuAlt1 } from 'react-icons/hi'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Menu from '../Menu/Menu'
+import { useAnimation } from 'framer-motion'
 
 type navbarProps = {}
 
 export default function Navbar({ }: navbarProps) {
 
   const [menuIsOpen, setMenuIsOpen] = useState(false)
-  // const setScrollY = () => {
-  //   if (!document.body.classList.contains('overflow-y-hidden')) {
-  //     document.body.classList.add("overflow-y-hidden");
-  //   } else {
-  //     document.body.classList.remove("overflow-y-hidden");
-  //   }
-  // }
+
+  const menuOpenControl = useAnimation();
+
+  const menuAnimations = (open: boolean) => {
+    if (open) {
+      menuOpenControl.start({
+        scale: 1,
+        opacity: 1,
+        height: '100vh',
+        width: '100vw',
+        transition: { type: 'sprring', duration: 0.6, bounce: 0.3 }
+      })
+    }
+    if (!open) {
+      menuOpenControl.start({
+        scale: 0,
+        opacity: 0,
+        height: 0,
+        width: 0,
+        transition: { type: 'sprring', duration: 0.6, bounce: 0.3 }
+      })
+    }
+  }
 
   const toggleMenu = () => {
-    if(!menuIsOpen){
+    if (menuIsOpen == false) {
       document.body.classList.add("overflow-y-hidden");
-      console.log("Should open now "+menuIsOpen)
-      setMenuIsOpen(!menuIsOpen)
-    } else{
+      // console.log("Should open now " + menuIsOpen)
+      setMenuIsOpen(true)
+      menuAnimations(true)
+    } else {
       document.body.classList.remove("overflow-y-hidden");
-      console.log("Should close now "+menuIsOpen)
-      setMenuIsOpen(!menuIsOpen)
+      // console.log("Should close now " + menuIsOpen)
+      setMenuIsOpen(false)
+      menuAnimations(false)
     }
   }
 
@@ -40,7 +59,7 @@ export default function Navbar({ }: navbarProps) {
           </div>
         </nav>
       </header>
-      <Menu menuIsOpen={menuIsOpen} toggleMenu={toggleMenu} />
+      <Menu menuIsOpen={menuIsOpen} toggleMenu={toggleMenu} menuOpenControl={menuOpenControl} />
 
     </div>
   )

@@ -8,6 +8,7 @@
     @apply max-w-4xl;
 }
 
-.bg-red{
-    @apply bg-rose-500;
+.bg-wheat{
+    /* @apply bg-rose-500; */
+    background-color: #fef3ea;
 }

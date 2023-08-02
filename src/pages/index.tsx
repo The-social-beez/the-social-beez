@@ -5,7 +5,7 @@ import WorkProcess from '@/components/WorkProcess/WorkProcess'
 // import WhatsappIcon from '@/components/Whatsapp-icon/WhatsappIcon'
 import { Inter } from 'next/font/google'
 import Head from 'next/head'
-import { useState } from 'react'
+// import { useState } from 'react'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -19,7 +19,7 @@ export default function Home() {
       <meta name="description" content="Meet the team behind The Social Beez; a Digital Marketing Agency in Badlapur, a dynamic group of three individuals passionate about helping businesses succeed in the digital landscape." />
     </Head>
 
-    <main>
+    <main className="bg-wheat">
       <Header />
       <AboutUs />
       <WorkProcess />

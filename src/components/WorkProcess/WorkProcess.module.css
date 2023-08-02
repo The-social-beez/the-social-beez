@@ -1,3 +1,89 @@
-.footer {
-    @apply bg-yellow-400;
+.workprocess {
+    font-family: 'Open Sans', sans-serif;
+    @apply text-white grid bg-gradient-to-r from-[#ffde59] to-[#ff914d] grid-cols-1 md:grid-cols-[2fr_3fr] my-16 md:my-24;
+}
+
+
+.workprocess .left{
+    @apply text-center p-4 sm:p-12 md:p-16 py-16 md:py-24 overflow-hidden;
+}
+
+.workprocess .left h4{
+    @apply text-5xl lg:text-8xl font-semibold w-full;
+}
+
+
+.workprocess .right{
+    @apply grid sm:grid-cols-2;
+}
+
+@media (max-width:640px) {
+.workprocess .right :nth-child(1){ grid-area: a1;}
+.workprocess .right :nth-child(2){ grid-area: a2;}
+.workprocess .right :nth-child(3){ grid-area: a3;}
+.workprocess .right :nth-child(4){ grid-area: a4;}
+.workprocess .right :nth-child(5){ grid-area: a5;}
+.workprocess .right :nth-child(6){ grid-area: a6;}
+
+    .workprocess .right{
+        display: grid;
+        background: purple;
+        grid-template-areas: 
+        'a1'
+        'a2'
+        'a4'
+        'a3'
+        'a5'
+        'a6';
+    }
+}
+
+.workprocess .right .cardCover{
+    position: relative;
+    @apply aspect-[3/1] sm:aspect-[2/1] md:aspect-auto;
+}
+
+.workprocess .right .cards{
+    @apply text-2xl sm:text-3xl md:text-4xl font-bold h-full flex justify-center items-center;
+    transition: 600ms ease-in-out transform;
+}
+
+.workprocess .right .cardCover:hover .cards{
+    transform: rotatey(180deg);
+}
+
+.workprocess .right .cardCover .cards .back{
+    @apply absolute text-xl md:text-xl lg:text-2xl top-0 left-0 right-0 bottom-0 h-full px-4 lg:px-12 opacity-0 text-center flex justify-center items-center;
+    transition: 600ms ease-in-out opacity;
+    transform: rotatey(180deg);
+}
+
+.workprocess .right .cardCover:hover .cards .back{
+    @apply opacity-100;
+}
+
+.workprocess .right .cardCover .cards .front{
+    @apply opacity-100;
+    transition: 600ms ease-in-out opacity;
+}
+
+.workprocess .right .cardCover:hover .cards .front{
+    @apply opacity-0;
+}
+
+
+.workprocess .right .cardCover img{
+    @apply hidden sm:block sm:absolute sm:z-10 sm:top-[20%] sm:pointer-events-none sm:rotate-[20deg];
+}
+
+.workprocess .right .cardCover .beePath1{
+    @apply left-[80%];
+}
+.workprocess .right .cardCover .beePath2{
+    @apply left-[88%];
+    transform: rotateY(180deg);
+    rotate: -20deg;
+}
+.workprocess .right .cardCover .beePath3{
+    @apply left-[80%];
 }
