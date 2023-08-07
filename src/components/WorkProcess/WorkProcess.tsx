@@ -14,7 +14,7 @@ const WorkProcess = (props: Props) => {
 
       <div className={styles.right}>
         <div className={styles.cardCover}>
-          <Image className={styles.beePath1} height={200} width={150} src={'/bee_path-removebg-preview.png'} alt={''} />
+          <Image priority={false} className={styles.beePath1} height={200} width={150} src={'/bee_path-removebg-preview.png'} alt={''} />
 
           <div className={styles.cards + ' bg-[#25bdbe]'}>
             <p className={styles.front}>MEET-UP</p>
@@ -30,7 +30,7 @@ const WorkProcess = (props: Props) => {
         </div>
 
         <div className={styles.cardCover}>
-          <Image className={styles.beePath2} height={200} width={150} src={'/bee_path-removebg-preview.png'} alt={''} />
+          <Image priority={false} className={styles.beePath2} height={200} width={150} src={'/bee_path-removebg-preview.png'} alt={''} />
 
           <div className={styles.cards + ' bg-[#ff738e]'}>
             <p className={styles.front}>SHARE POA</p>
@@ -46,7 +46,7 @@ const WorkProcess = (props: Props) => {
         </div>
 
         <div className={styles.cardCover}>
-          <Image className={styles.beePath3} height={200} width={150} src={'/bee_path-removebg-preview.png'} alt={''} />
+          <Image priority={false} className={styles.beePath3} height={200} width={150} src={'/bee_path-removebg-preview.png'} alt={''} />
 
           <div className={styles.cards + ' bg-[#25bdbe]'}>
             <p className={styles.front}>APPROVAL</p>

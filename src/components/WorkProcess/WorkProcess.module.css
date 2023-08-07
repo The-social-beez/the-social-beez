@@ -5,11 +5,11 @@
 
 
 .workprocess .left{
-    @apply text-center p-4 sm:p-12 md:p-16 py-16 md:py-24 overflow-hidden;
+    @apply text-center p-4 sm:p-12 md:px-8 lg:px-12 xl:px-16 md:p-16 py-16 md:py-24 overflow-hidden;
 }
 
 .workprocess .left h4{
-    @apply text-5xl lg:text-8xl font-semibold w-full;
+    @apply text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-semibold w-full;
 }
 
 
@@ -26,8 +26,7 @@
 .workprocess .right :nth-child(6){ grid-area: a6;}
 
     .workprocess .right{
-        display: grid;
-        background: purple;
+        /* display: grid; */
         grid-template-areas: 
         'a1'
         'a2'
@@ -73,14 +72,14 @@
 
 
 .workprocess .right .cardCover img{
-    @apply hidden sm:block sm:absolute sm:z-10 sm:top-[20%] sm:pointer-events-none sm:rotate-[20deg];
+    @apply hidden sm:h-auto sm:w-32 sm:block sm:absolute sm:z-10 sm:top-[20%] sm:pointer-events-none sm:rotate-[20deg];
 }
 
 .workprocess .right .cardCover .beePath1{
     @apply left-[80%];
 }
 .workprocess .right .cardCover .beePath2{
-    @apply left-[88%];
+    @apply left-[85%];
     transform: rotateY(180deg);
     rotate: -20deg;
 }
