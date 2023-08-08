@@ -30,6 +30,8 @@
 }
 
 .left_side .title {
+    /* pointer-events: none; */
+    user-select: none;
     color: white;
 }
 
@@ -43,6 +45,8 @@
 }
 
 .right_side .title {
+    /* pointer-events: none; */
+    user-select: none;
     color: black;
 }
 
