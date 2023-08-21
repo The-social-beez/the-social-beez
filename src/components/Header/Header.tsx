@@ -26,6 +26,7 @@ export default function Header({ }: headerProps) {
     document.getElementById('header')!.addEventListener('mousemove', (e) => {
       setLeftWidth(e.clientX / window.innerWidth * 100);
     })
+    document.body.classList.add('bg-wheat');
   }, [])
 
 

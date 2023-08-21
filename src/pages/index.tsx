@@ -2,6 +2,7 @@
 import AboutUs from '@/components/AboutUs/AboutUs'
 import Header from '@/components/Header/Header'
 import WorkProcess from '@/components/WorkProcess/WorkProcess'
+import OurServices from '@/components/OurServices/OurServices'
 // import WhatsappIcon from '@/components/Whatsapp-icon/WhatsappIcon'
 import { Inter } from 'next/font/google'
 import Head from 'next/head'
@@ -23,6 +24,7 @@ export default function Home() {
       <Header />
       <AboutUs />
       <WorkProcess />
+      <OurServices />
     </main>
   </>
   )

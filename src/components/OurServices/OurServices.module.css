@@ -1,3 +1,60 @@
-.bgyello {
-    @apply bg-yellow-400;
+.our_services {
+    /* writing-mode: vertical-lr; */
+    /* text-orientation: upright; */
+    @apply relative;
+}
+
+.bg-blackish {
+    background-color: coral;
+}
+
+.our_services h4 {
+    @apply text-center font-bold text-4xl [word-spacing:0.5rem] mb-4;
+}
+
+.our_services .parent1,
+.our_services .parent2,
+.our_services .parent3,
+.our_services .parent4 {
+    @apply relative m-10 mx-20;
+}
+
+.our_services .parent1 .content,
+.our_services .parent2 .content,
+.our_services .parent3 .content,
+.our_services .parent4 .content {
+    @apply relative text-2xl font-bold text-center h-full text-white p-8 py-12 rounded capitalize;
+}
+
+.our_services .parent1 :nth-child(1),
+.our_services .parent2 :nth-child(1),
+.our_services .parent3 :nth-child(1),
+.our_services .parent4 :nth-child(1) {
+    @apply absolute bg-[#9EDDDF] top-4 left-4 h-full w-full rounded;
+}
+
+.our_services .parent1 .content {
+    @apply bg-[#00C4CC];
+}
+.our_services .parent2 .content {
+    @apply bg-[#fcee21];
+}
+.our_services .parent3 .content {
+    @apply bg-[#ff738e];
+}
+.our_services .parent4 .content {
+    @apply bg-[#ffa43a];
+}
+
+.our_services .parent1 :nth-child(1){
+    @apply bg-[#9EDDDF];
+}
+.our_services .parent2 :nth-child(1){
+    @apply bg-[#fff9a7];
+}
+.our_services .parent3 :nth-child(1){
+    @apply bg-[#ffc6d1];
+}
+.our_services .parent4 :nth-child(1) {
+    @apply bg-[#ffd7a8];
 }
