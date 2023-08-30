@@ -76,28 +76,28 @@
 
 @media (min-width: 768px) {
     .our_services {
-        @apply h-[94rem];
+        @apply h-[94rem] z-[1];
     }
     
 
     .our_services h4 {
         writing-mode: vertical-lr;
         text-orientation: upright;
-        @apply text-center text-4xl p-8 px-10 font-semibold bg-[#feffd4];
+        @apply text-center text-4xl p-8 px-10 mt-16 font-semibold bg-[#feffd4];
     }
 
     .blocks{
-        @apply absolute w-[17rem] h-[30rem] transition-all duration-1000 text-4xl font-bold text-left;
+        @apply absolute w-[17rem] h-[30rem] text-4xl font-bold text-left;
     }
 
     .transition_all_1s{
-        @apply transition-all duration-1000;
+        @apply transition-[top,left] duration-1000;
     }
 
     /* ------------------------- DIV 1 ---------------------- */
     
     .our_services .parent1 {
-        @apply blocks top-0 left-[20%] xl:left-[24%];
+        @apply blocks top-4 left-[20%] xl:left-[24%];
     }
 
     .our_services .parent1 .content{
@@ -148,7 +148,7 @@
 
     /* ------------------------- DIV 4 ---------------------- */
     .our_services .parent4 {
-        @apply blocks top-[60rem] left-[63%] xl:left-[67%];
+        @apply blocks top-[55rem] left-[63%] xl:left-[67%];
     }
 
     .our_services .parent4 .content{
