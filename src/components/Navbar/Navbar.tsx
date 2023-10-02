@@ -48,7 +48,7 @@ export default function Navbar({ }: navbarProps) {
   }
 
   return (
-    <div>
+    <>
       <header id="header" className="absolute z-10 top-0 left-0 right-0 w-full">
         <nav className="p-4 md:p-6 px-6 md:px-12 flex justify-between">
           <div className="logo text-2xl sm:text-3xl md:text-4xl font-bold text-white">
@@ -61,6 +61,6 @@ export default function Navbar({ }: navbarProps) {
       </header>
       <Menu menuIsOpen={menuIsOpen} toggleMenu={toggleMenu} menuOpenControl={menuOpenControl} />
 
-    </div>
+    </>
   )
 }

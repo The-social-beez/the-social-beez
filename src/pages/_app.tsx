@@ -1,7 +1,7 @@
-import CallIcon from '@/components/Call-button/CallIcon'
 import Footer from '@/components/Footer/Footer'
 import Navbar from '@/components/Navbar/Navbar'
-import WhatsappIcon from '@/components/Whatsapp-button/WhatsappIcon'
+import WhatsappIcon from '@/feature/Whatsapp-button/WhatsappIcon'
+import CallIcon from '@/feature/Call-button/CallIcon'
 import '@/styles/globals.css'
 
 import type { AppProps } from 'next/app'
