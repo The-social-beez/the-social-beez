@@ -1,3 +1,4 @@
+"use client"
 import React, { useEffect, useRef } from 'react'
 import styles from './OurServices.module.css'
 import { AnimationControls, motion, useScroll, useTransform } from 'framer-motion'
@@ -9,8 +10,8 @@ const OurServices = (props: Props) => {
 
     const ref = useRef(null)
     const isInView = useInView(ref, { once: true, amount: 0.2 })
-    
-    
+
+
     // const { scrollYProgress } = useScroll({
     //     target: ref,
     //     offset: ["start end", "end start"],
@@ -37,7 +38,7 @@ const OurServices = (props: Props) => {
     // }, [isInView])
 
     return (
-        <div className={styles.our_services} ref={ref}
+        <section id="ourservices" className={styles.our_services} ref={ref}
         >
             <h4>OUR SERVICES</h4>
 
@@ -46,7 +47,7 @@ const OurServices = (props: Props) => {
                 initial='initial'
                 animate='animate'
                 custom={1}
-                // style={{ y: positionY }}
+            // style={{ y: positionY }}
             >
                 <div></div>
                 <div></div>
@@ -60,7 +61,7 @@ const OurServices = (props: Props) => {
                 initial='initial'
                 animate='animate'
                 custom={2}
-                // style={{ y: positionY }}
+            // style={{ y: positionY }}
             >
                 <div></div>
                 <div></div>
@@ -74,7 +75,7 @@ const OurServices = (props: Props) => {
                 initial='initial'
                 animate='animate'
                 custom={3}
-                // style={{ y: positionY }}
+            // style={{ y: positionY }}
             >
                 <div></div>
                 <div></div>
@@ -88,7 +89,7 @@ const OurServices = (props: Props) => {
                 initial='initial'
                 animate='animate'
                 custom={4}
-                // style={{ y: positionY }}
+            // style={{ y: positionY }}
             >
                 <div></div>
                 <div></div>
@@ -96,7 +97,7 @@ const OurServices = (props: Props) => {
                     GRAPHIC DESIGNING
                 </div>
             </motion.div>
-        </div>
+        </section>
     )
 }
 

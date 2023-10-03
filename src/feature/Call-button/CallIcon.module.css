@@ -1,7 +1,3 @@
-/* .footer {
-    @apply ;
-} */
-
 /* whatsapp icon */
 .whatsapp_icon {
     position: fixed;
@@ -11,7 +7,7 @@
     z-index: 100;
 }
 
-.whatsapp_icon button {
+.whatsapp_icon a {
     border: none;
     background: #15b2f7;
 
@@ -25,7 +21,7 @@
     /* border: 4px solid white; */
 }
 
-.whatsapp_icon button a {
+.whatsapp_icon a button {
     display: flex;
     font-size: 1.5rem;
     text-decoration: none;

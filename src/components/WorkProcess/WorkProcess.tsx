@@ -6,7 +6,7 @@ type Props = {}
 
 const WorkProcess = (props: Props) => {
   return (
-    <div id="workprocess" className={styles.workprocess}>
+    <section id="workprocess" className={styles.workprocess}>
 
       <div className={styles.left}>
         <h4>WHAT IS THE WORK PROCESS ?</h4>
@@ -61,7 +61,7 @@ const WorkProcess = (props: Props) => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   )
 }
 

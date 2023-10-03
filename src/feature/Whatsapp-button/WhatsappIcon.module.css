@@ -11,7 +11,7 @@
     z-index: 100;
 }
 
-.whatsapp_icon button {
+.whatsapp_icon a {
     border: none;
     background: #25D366;
 
@@ -23,7 +23,7 @@
     align-items: center;
 }
 
-.whatsapp_icon button a {
+.whatsapp_icon a button {
     display: flex;
     font-size: 2rem;
     text-decoration: none;

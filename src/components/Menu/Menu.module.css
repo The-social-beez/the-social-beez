@@ -1,5 +1,5 @@
 /* opan sans */
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap'); */
 
 .menu {
     @apply absolute top-0 right-0 z-[101] h-screen w-full grid grid-rows-1 grid-cols-1 md:grid-cols-2;

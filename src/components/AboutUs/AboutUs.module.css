@@ -1,7 +1,7 @@
 /* opan sans */
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap'); */
 /* Josefin sans */
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600;700&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600;700&display=swap'); */
 
 @font-face {
     font-family: Glacial Indifference;
@@ -9,23 +9,23 @@
 }
 
 .about_us {
-    @apply relative px-6 py-16 md:px-10 md:py-20 lg:px-16 lg:py-24 mt-8
+    @apply relative px-6 py-16 md:px-10 md:py-20 lg:px-16 lg:py-24 mt-8;
 }
 
 .about_us__h2 {
-    @apply text-4xl sm:text-5xl md:text-6xl font-bold absolute left-0 text-center top-10 md:top-12 lg:top-16 w-full
+    @apply text-4xl sm:text-5xl md:text-6xl font-bold absolute left-0 text-center top-10 md:top-12 lg:top-16 w-full;
 }
 
 .about_us__div {
-    @apply border-[#ffd93b] border-[2rem] sm:border-[2.5rem] md:border-[3rem] p-4 py-12 md:p-8 lg:p-16 flex flex-col justify-center sm:min-h-[24rem] md:min-h-[30rem] lg:min-h-[36rem] bg-white 
+    @apply border-[#ffd93b] border-[2rem] sm:border-[2.5rem] md:border-[3rem] p-4 py-12 md:p-8 lg:p-16 flex flex-col justify-center sm:min-h-[24rem] md:min-h-[30rem] lg:min-h-[36rem] bg-white;
 }
 
 .about_us__div p{
     font-family: 'Glacial Indifference', sans-serif;
-    @apply text-2xl md:text-3xl text-center [word-spacing:0.5rem] leading-[1.5] md:leading-[1.75] lg:leading-[2]
+    @apply text-2xl md:text-3xl text-center [word-spacing:0.5rem] leading-[1.5] md:leading-[1.75] lg:leading-[2];
 }
 
 .about_us__div em{
-    font-family: 'Open Sans', sans-serif;
-    @apply text-[#00c4cc] not-italic font-semibold
+    /* font-family: 'Open Sans', sans-serif; */
+    @apply text-[#00c4cc] not-italic;
 }

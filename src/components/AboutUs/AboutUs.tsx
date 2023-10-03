@@ -1,14 +1,20 @@
 import React from 'react'
 import styles from './AboutUs.module.css'
 
+import { Josefin_Sans } from 'next/font/google'
+const josefin_Sans = Josefin_Sans({
+  subsets: ['latin'],
+  weight: ['700']
+})
+
 type Props = {}
 
 const AboutUs = (props: Props) => {
   return (
-    <section className={styles.about_us}>
+    <section id="aboutus" className={styles.about_us}>
       <h2 className={styles.about_us__h2}>ABOUT US</h2>
       <div className={styles.about_us__div}>
-        <p>We are a <em>DIGITAL MARKETING AGENCY</em> led by <em>TRIO</em> a in
+        <p>We are a <em className={josefin_Sans.className}>DIGITAL MARKETING AGENCY</em> led by <em className={josefin_Sans.className}>TRIO</em> a in
           Badlapur, Thane
         </p>
         <p>and we are eager to support and grow your brand.</p>

@@ -1,26 +1,26 @@
 /* Header styles */
 /* MARATHI */
-@import url('https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Marathi:ital@0;1&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Marathi:ital@0;1&display=swap'); */
 /* Permanant marker */
-@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap'); */
 /* Monterserrat */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap'); */
 
 /* pink -> ff738e */
 
 .right_side .title,
 .left_side .title {
-    font-family: "Montserrat", sans-serif;
-    @apply text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl 2xl:text-[6rem] font-extrabold my-0 mx-[6vw] w-[90vw]
-    flex flex-col;
+    /* font-family: "Montserrat", sans-serif; */
+    @apply text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl 2xl:text-[6rem] my-0 mx-[6vw] w-[90vw] flex flex-col;
+    /* font-weight: 700; */
     /* tracking-tighter [word-spacing:0rem]; */
 }
 
 .right_side .fancy,
 .left_side .fancy {
-    font-family: "Permanent Marker", cursive;
+    /* font-family: "Permanent Marker", cursive; */
     font-size: 1.1em;
-    @apply xs:py-2 sm:py-4 md:py-7
+    @apply xs:py-2 sm:py-4 md:py-7 font-black;
 }
 
 .left_side {
@@ -30,9 +30,9 @@
 }
 
 .left_side .title {
-    /* pointer-events: none; */
     user-select: none;
     color: white;
+    font-weight: 700;
 }
 
 .left_side .fancy {
@@ -45,14 +45,13 @@
 }
 
 .right_side .title {
-    /* pointer-events: none; */
     user-select: none;
     color: black;
+    font-weight: 700;
 }
 
 .right_side .fancy {
     color: white;
-    /* font-family: 'Tiro Devanagari Hindi', serif; */
-    font-family: 'Tiro Devanagari Marathi', serif;
+    /* font-family: 'Tiro Devanagari Marathi', serif; */
     @apply md:pt-10 md:pb-4 italic;
 }

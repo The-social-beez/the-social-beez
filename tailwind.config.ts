@@ -1,7 +1,6 @@
-// const colors = require('tailwindcss/colors')
+import type { Config } from 'tailwindcss'
 
-/** @type {import('tailwindcss').Config} */
-module.exports = {
+const config: Config = {
   content: [
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
@@ -31,3 +30,4 @@ module.exports = {
   },
   plugins: [],
 }
+export default config

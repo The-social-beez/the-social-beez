@@ -8,11 +8,11 @@ type Props = {}
 function CallIcon({ }: Props) {
   return (
     <div className={styles.whatsapp_icon}>
-      <button>
-        <Link target="_blank" href={'tel:+919011570451'}>
+      <Link target="_blank" href={'tel:+919011570451'}>
+        <button>
           <FaPhone />
-        </Link>
-      </button>
+        </button>
+      </Link>
     </div>
   )
 }
