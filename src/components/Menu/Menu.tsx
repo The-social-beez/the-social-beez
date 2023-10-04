@@ -66,23 +66,23 @@ const Menu = ({ menuIsOpen, toggleMenu, menuOpenControl }: Props) => {
 
         <motion.ul variants={unOrderedList} animate='visible' initial='hidden'>
           <motion.li variants={listItem}>
-            <Link onClick={() => toggleMenu()} href={'/'}>Home</Link>
+            <Link aria-label="Home" onClick={() => toggleMenu()} href={'/'}>Home</Link>
           </motion.li>
 
           <motion.li variants={listItem}>
-            <Link onClick={() => toggleMenu()} href={'/about'}>About Us</Link>
+            <Link aria-label="About us" onClick={() => toggleMenu()} href={'/about'}>About Us</Link>
           </motion.li>
 
           <motion.li variants={listItem}>
-            <Link onClick={() => toggleMenu()} href={'/services'}>Our Services</Link>
+            <Link aria-label="Our services" onClick={() => toggleMenu()} href={'/services'}>Our Services</Link>
           </motion.li>
 
           <motion.li variants={listItem}>
-            <Link onClick={() => toggleMenu()} href={'/blog'}>Blog</Link>
+            <Link aria-label="Our blogs" onClick={() => toggleMenu()} href={'/blog'}>Blog</Link>
           </motion.li>
 
           <motion.li variants={listItem}>
-            <Link onClick={() => toggleMenu()} href={'/contact'}>Contact Us</Link>
+            <Link aria-label="Contact us" onClick={() => toggleMenu()} href={'/contact'}>Contact Us</Link>
           </motion.li>
 
         </motion.ul>

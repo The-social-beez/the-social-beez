@@ -8,8 +8,8 @@ type Props = {}
 function CallIcon({ }: Props) {
   return (
     <div className={styles.whatsapp_icon}>
-      <Link target="_blank" href={'tel:+919011570451'}>
-        <button>
+      <Link aria-label="Call us directly" target="_blank" href={'tel:+919011570451'}>
+        <button id="phonecall">
           <FaPhone />
         </button>
       </Link>

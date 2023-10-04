@@ -1,5 +1,7 @@
 import React from 'react'
 import styles from './AboutUs.module.css'
+import localFont from 'next/font/local'
+const myFont = localFont({ src: 'GlacialIndifference-Regular.otf' })
 
 import { Josefin_Sans } from 'next/font/google'
 const josefin_Sans = Josefin_Sans({
