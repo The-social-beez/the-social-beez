@@ -1,6 +1,7 @@
 import './globals.css'
 import type { Metadata } from 'next'
 // import { Inter } from 'next/font/google'
+import { Analytics } from '@vercel/analytics/react';
 
 import WhatsappIcon from '@/feature/Whatsapp-button/WhatsappIcon'
 import CallIcon from '@/feature/Call-button/CallIcon'
@@ -24,7 +25,8 @@ export default function RootLayout({
       <body className="bg-wheat">
         <Navbar />
 
-          {children}
+        {children}
+        <Analytics />
 
         <Footer />
 
