@@ -1,6 +1,6 @@
-.footer {
+/* .footer {
     @apply h-48 lg:h-72 bg-yellow-400 flex items-end justify-center relative uppercase;
-}
+} */
 
 .wave {
     position: absolute;
