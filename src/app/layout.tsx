@@ -14,6 +14,7 @@ import Head from 'next/head';
 export const metadata: Metadata = {
   title: 'The Social Beez | Kickstart your brand!',
   description: 'Digital Marketing Agency in Badlapur - The SocialBeez',
+  // "google-site-verification": "LBM0Y_Wpd5Rz7aFny3csEeuRTlz7YVMyVcEyyJ6T4zM"
 
 }
 
@@ -24,9 +25,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <Head>
+      <head>
         <meta name="google-site-verification" content="LBM0Y_Wpd5Rz7aFny3csEeuRTlz7YVMyVcEyyJ6T4zM" />
-      </Head>
+      </head>
+
       <body className="bg-wheat">
         <Navbar />
 
