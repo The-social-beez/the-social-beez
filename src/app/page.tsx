@@ -10,9 +10,9 @@ import Head from 'next/head'
 export default function Home() {
   return (
     <>
-      <Head>
+      {/* <Head>
         <meta name="google-site-verification" content="LBM0Y_Wpd5Rz7aFny3csEeuRTlz7YVMyVcEyyJ6T4zM" />
-      </Head>
+      </Head> */}
       <main className='bg-wheat'>
         <Header />
         <AboutUs />
