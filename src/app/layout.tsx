@@ -7,12 +7,14 @@ import WhatsappIcon from '@/feature/Whatsapp-button/WhatsappIcon'
 import CallIcon from '@/feature/Call-button/CallIcon'
 import Navbar from '@/components/Navbar/Navbar'
 import Footer from '@/components/Footer/Footer'
+import Head from 'next/head';
 
 // const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'The Social Beez | Kickstart your brand!',
   description: 'Digital Marketing Agency in Badlapur - The SocialBeez',
+
 }
 
 export default function RootLayout({
@@ -22,6 +24,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <Head>
+        <meta name="google-site-verification" content="LBM0Y_Wpd5Rz7aFny3csEeuRTlz7YVMyVcEyyJ6T4zM" />
+      </Head>
       <body className="bg-wheat">
         <Navbar />
 
