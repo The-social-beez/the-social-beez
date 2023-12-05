@@ -1,5 +1,5 @@
 "use server"
-import { transporter, mailOptions } from "../../config/nodemailer"
+import { transporter, mailOptions } from "@/../config/nodemailer"
 
 const CONTACT_MESSAGE_FIELDS: { name: string, email: string, subject: string, message: string } = {
     name: "Name",
@@ -9,19 +9,6 @@ const CONTACT_MESSAGE_FIELDS: { name: string, email: string, subject: string, me
 };
 
 const generateEmailContent = (data: Record<string, any>) => {
-    // const stringData = Object.entries(data).reduce(
-    //     (str, [key, val]) =>
-    //         (str += `${CONTACT_MESSAGE_FIELDS[key as keyof typeof CONTACT_MESSAGE_FIELDS]}: \n${val} \n \n`),
-    //     ""
-    // );
-    // const htmlData = Object.entries(data).reduce((str, [key, val]) => {
-    //     return (str += `<h3 class="form-heading" align="left">${CONTACT_MESSAGE_FIELDS[key as keyof typeof CONTACT_MESSAGE_FIELDS]}</h3><p class="form-answer" align="left">${val}</p>`);
-    // }, "");
-
-    // return {
-    //     text: stringData,
-    //     html: `<!DOCTYPE html><html> <!-- (Rest of the HTML template code here) --> </html>`,
-    // };
 
     const stringData = Object.entries(data).reduce(
         (str, [key, val]) =>
@@ -48,6 +35,12 @@ export const sendMessage = async (formData: FormData) => {
     const whitespaceRegex = /\s/;
 
     const hasWhiteSpaceInFullName: boolean = fullName ? whitespaceRegex.test(fullName.toString()) : true;
+
+    if(fullName !== null && hasWhiteSpaceInFullName){
+        fullName = fullName.toString()
+        fullName = fullName.trim()
+    }
+
     const hasWhiteSpaceInEmail: boolean = email ? whitespaceRegex.test(email.toString()) : true;
     let data = {
         name: fullName?.toString() || "",
@@ -56,17 +49,18 @@ export const sendMessage = async (formData: FormData) => {
         message: message?.toString() || ""
     }
 
+    // return {
+    //     success: false,
+    //     message: "Empty values not allowed!"
+    // }
+
     if (!(fullName?.length === 0 || email?.length === 0)) {
-        if (hasWhiteSpaceInFullName) {
-            return {
-                success: false,
-                message: "Whitespaces are not allowed in Name!"
-            }
-        } else if (hasWhiteSpaceInEmail) {
+        if (hasWhiteSpaceInEmail) {
             return {
                 success: false,
                 message: "Whitespaces are not allowed in Email!"
             }
+            
         } else {
 
             if (!(message === "" || message?.length === 0)) {
@@ -88,10 +82,7 @@ export const sendMessage = async (formData: FormData) => {
                         message: "Unknown error occurred!"
                     }
                 }
-                // console.log(`Message from : ${fullName} \nEmail : ${email} \nMessage : ${message}`)
             } else {
-                // console.log(`Message from : ${fullName} \nEmail : ${email} \nMessage : No message from user`)
-                // SENDING EMAILS
                 data = { ...data, message: "No message" }
                 try {
                     await transporter.sendMail({

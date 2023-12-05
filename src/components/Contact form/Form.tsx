@@ -1,8 +1,10 @@
-"use client"
-import React, { useEffect, useState } from 'react'
-import styles from './Contact.module.css'
-import { sendMessage } from '@/feature/action'
-import { experimental_useFormStatus } from 'react-dom'
+"use client";
+import React, { useEffect, useState } from 'react';
+import styles from './Contact.module.css';
+import { sendMessage } from '@/feature/action';
+import { experimental_useFormStatus } from 'react-dom';
+import { ToastContainer, toast } from 'react-toastify';
+import "react-toastify/dist/ReactToastify.css";
 
 type Props = {}
 
@@ -21,56 +23,102 @@ const Form = (props: Props) => {
         }))
     }
 
-    const checkFormShouldSubmit = (e: any) => {
-        if ((e.target.name === 'fullName' && e.target.value.trim().length < 2) || contactData.email.trim().length < 6) {
+    const checkFormShouldSubmit = (e?: any | undefined, setssValue?: string) => {
+        if (!setssValue) {
+            if ((e.target.name === 'fullName' && e.target.value.trim().length < 2) || contactData.email.trim().length < 6) {
+                setShouldSubmit(false)
+            } else if ((e.target.name === 'email' && e.target.value.trim().length < 6) || contactData.fullName.trim().length < 2) {
+                setShouldSubmit(false)
+            }
+            else {
+                setShouldSubmit(true)
+            }
+        } else {
             setShouldSubmit(false)
-        } else if ((e.target.name === 'email' && e.target.value.trim().length < 6) || contactData.fullName.trim().length < 2) {
-            setShouldSubmit(false)
-        }
-        else {
-            setShouldSubmit(true)
         }
     }
 
+    const setToast = (message: string, success: boolean) => {
+        success ?
+            toast.success(message, {
+                position: "top-center",
+                autoClose: 3000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "dark",
+            }) : toast.error(message, {
+                position: "top-center",
+                autoClose: 3000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "dark",
+            })
+    }
+
     return (
-        <form
-            action={async formData => {
-                let { fullName, email, message } = contactData
-                if (fullName.trim().length >= 2 && email.trim().length >= 6) {
-                    let formResponse = await sendMessage(formData)
-                    alert(formResponse.message)
-                    setContactData({
-                        fullName: "",
-                        email: "",
-                        message: ""
-                    })
-                    // console.log(formResponse.message)
-                }
-            }}
-            id="contact-form"
-            className={`${styles.right} ${styles.contact_form}`}>
+        <>
+            <form
+                action={async formData => {
+                    let { fullName, email, message } = contactData
 
-            <div className={styles.contact__inpgrid}>
-                <div className="mb-4">
-                    {/* <!-- <label className="input-label" for="name">Full name</label> --> */}
-                    <input value={contactData.fullName} onKeyUp={e => checkFormShouldSubmit(e)} onChange={e => handleChange(e)} className={`${styles.contact_input}`} type="text" name="fullName" id="name" placeholder="Full Name" required={true} autoComplete="on" />
+                    if (fullName.trim().length >= 2 && email.trim().length >= 6) {
+                        let formResponse = await sendMessage(formData)
+                        setToast(formResponse.message, formResponse.success)
+                        setContactData({
+                            fullName: "",
+                            email: "",
+                            message: ""
+                        })
+                        checkFormShouldSubmit(false, "false")
+                        // console.log(formResponse)
+                    }
+                }}
+                id="contact-form"
+                className={`${styles.right} ${styles.contact_form}`}>
+
+                <div className={styles.contact__inpgrid}>
+                    <div className="mb-4">
+                        {/* <!-- <label className="input-label" for="name">Full name</label> --> */}
+                        <input value={contactData.fullName} onKeyUp={e => checkFormShouldSubmit(e)} onChange={e => handleChange(e)} className={`${styles.contact_input}`} type="text" name="fullName" id="name" placeholder="Full Name" required={true} autoComplete="on" />
+                    </div>
+
+                    <div className="mb-4">
+                        {/* <!-- <label className="input-label" for="email">E-mail address</label> --> */}
+                        <input value={contactData.email} onKeyUp={e => checkFormShouldSubmit(e)} onChange={e => handleChange(e)} className={`${styles.contact_input}`} type="email" name="email" id="email" placeholder="E-mail Address" required={true} autoComplete="on" />
+                    </div>
                 </div>
 
                 <div className="mb-4">
-                    {/* <!-- <label className="input-label" for="email">E-mail address</label> --> */}
-                    <input value={contactData.email} onKeyUp={e => checkFormShouldSubmit(e)} onChange={e => handleChange(e)} className={`${styles.contact_input}`} type="email" name="email" id="email" placeholder="E-mail Address" required={true} autoComplete="on" />
+                    {/* <!-- <textarea className="contact_input" name="message" id="message" placeholder=" "> --> */}
+                    {/* <!-- <label className="input-label" for="message">Your message</label> --> */}
+                    <textarea value={contactData.message} onKeyUp={e => checkFormShouldSubmit(e)} onChange={e => handleChange(e)} className={`${styles.contact_input}`} name="message" id="message" rows={6} placeholder="Your Message"></textarea>
                 </div>
-            </div>
 
-            <div className="mb-4">
-                {/* <!-- <textarea className="contact_input" name="message" id="message" placeholder=" "> --> */}
-                {/* <!-- <label className="input-label" for="message">Your message</label> --> */}
-                <textarea value={contactData.message} onKeyUp={e => checkFormShouldSubmit(e)} onChange={e => handleChange(e)} className={`${styles.contact_input}`} name="message" id="message" rows={6} placeholder="Your Message"></textarea>
-            </div>
-            <div className="submit">
-                <Button shouldSubmit={shouldSubmit} />
-            </div>
-        </form>
+                <div className="submit">
+                    <Button shouldSubmit={shouldSubmit} />
+                </div>
+            </form>
+
+            <ToastContainer
+                position="top-center"
+                autoClose={5000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+                theme="dark"
+            />
+        </>
+
     )
 }
 
