@@ -1,16 +1,11 @@
 import './globals.css'
 import type { Metadata } from 'next'
-// import { Inter } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/react';
 
-import WhatsappIcon from '@/feature/Whatsapp-button/WhatsappIcon'
-import CallIcon from '@/feature/Call-button/CallIcon'
-import Navbar from '@/components/Navbar/Navbar'
-import Footer from '@/components/Footer/Footer'
+import { WhatsappIcon, CallIcon } from '@/feature'
+import { Navbar, Footer } from '@/components'
 import Script from 'next/script'
 
-
-// const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'The Social Beez | Kickstart your brand!',
@@ -36,7 +31,7 @@ export default function RootLayout({
 
         <WhatsappIcon />
         <CallIcon />
-        
+
         <Analytics />
       </body>
       <Script async src="https://www.googletagmanager.com/gtag/js?id=G-K39NH2WJ72" />
