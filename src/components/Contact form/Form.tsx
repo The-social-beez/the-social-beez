@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useState } from 'react';
-import styles from './Contact.module.css';
+import './Contact.css';
 import { sendMessage } from '@/feature/action';
 import { experimental_useFormStatus } from 'react-dom';
 import { ToastContainer, toast } from 'react-toastify';
@@ -80,24 +80,24 @@ const Form = (props: Props) => {
                     }
                 }}
                 id="contact-form"
-                className={`${styles.right} ${styles.contact_form}`}>
+                className={`right contact_form`}>
 
-                <div className={styles.contact__inpgrid}>
+                <div className={`contact__inpgrid`}>
                     <div className="mb-4">
                         {/* <!-- <label className="input-label" for="name">Full name</label> --> */}
-                        <input value={contactData.fullName} onKeyUp={e => checkFormShouldSubmit(e)} onChange={e => handleChange(e)} className={`${styles.contact_input}`} type="text" name="fullName" id="name" placeholder="Full Name" required={true} autoComplete="on" />
+                        <input value={contactData.fullName} onKeyUp={e => checkFormShouldSubmit(e)} onChange={e => handleChange(e)} className={`contact_input`} type="text" name="fullName" id="name" placeholder="Full Name" required={true} autoComplete="on" />
                     </div>
 
                     <div className="mb-4">
                         {/* <!-- <label className="input-label" for="email">E-mail address</label> --> */}
-                        <input value={contactData.email} onKeyUp={e => checkFormShouldSubmit(e)} onChange={e => handleChange(e)} className={`${styles.contact_input}`} type="email" name="email" id="email" placeholder="E-mail Address" required={true} autoComplete="on" />
+                        <input value={contactData.email} onKeyUp={e => checkFormShouldSubmit(e)} onChange={e => handleChange(e)} className={`contact_input`} type="email" name="email" id="email" placeholder="E-mail Address" required={true} autoComplete="on" />
                     </div>
                 </div>
 
                 <div className="mb-4">
                     {/* <!-- <textarea className="contact_input" name="message" id="message" placeholder=" "> --> */}
                     {/* <!-- <label className="input-label" for="message">Your message</label> --> */}
-                    <textarea value={contactData.message} onKeyUp={e => checkFormShouldSubmit(e)} onChange={e => handleChange(e)} className={`${styles.contact_input}`} name="message" id="message" rows={6} placeholder="Your Message"></textarea>
+                    <textarea value={contactData.message} onKeyUp={e => checkFormShouldSubmit(e)} onChange={e => handleChange(e)} className={`contact_input`} name="message" id="message" rows={6} placeholder="Your Message"></textarea>
                 </div>
 
                 <div className="submit">

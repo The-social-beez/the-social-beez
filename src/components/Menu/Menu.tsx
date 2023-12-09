@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from './Menu.module.css'
+import './Menu.css'
 import { CgClose } from 'react-icons/cg'
 import Link from 'next/link'
 import { BsInstagram, BsTelephone } from 'react-icons/bs'
@@ -49,7 +49,7 @@ const Menu = ({ menuIsOpen, toggleMenu, menuOpenControl }: Props) => {
   }
 
   return (
-    <motion.div className={styles.menu}
+    <motion.div className={`menu`}
     initial={{
       scale: 0,
       opacity: 0,
@@ -58,7 +58,7 @@ const Menu = ({ menuIsOpen, toggleMenu, menuOpenControl }: Props) => {
     }}
       animate={menuOpenControl}>
 
-      <motion.div className={styles.left}
+      <motion.div className={`left`}
         initial='hidden'
         animate='visible'
         variants={menuBlocksVarient}
@@ -88,7 +88,7 @@ const Menu = ({ menuIsOpen, toggleMenu, menuOpenControl }: Props) => {
         </motion.ul>
       </motion.div>
 
-      <motion.div className={styles.right}
+      <motion.div className={`right`}
         initial='hidden'
         animate='visible'
         variants={menuBlocksVarient}

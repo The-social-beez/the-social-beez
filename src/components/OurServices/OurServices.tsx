@@ -1,6 +1,6 @@
 "use client"
 import React, { useEffect, useRef } from 'react'
-import styles from './OurServices.module.css'
+import './OurServices.css'
 import { AnimationControls, motion, useScroll, useTransform } from 'framer-motion'
 import { useInView } from 'framer-motion'
 
@@ -38,11 +38,11 @@ const OurServices = (props: Props) => {
     // }, [isInView])
 
     return (
-        <section id="ourservices" className={styles.our_services} ref={ref}
+        <section id="ourservices" className={`our_services`} ref={ref}
         >
             <h4>OUR SERVICES</h4>
 
-            <motion.div className={styles.parent1}
+            <motion.div className={`parent1`}
                 variants={fadeInAnimationVariants}
                 initial='initial'
                 animate='animate'
@@ -51,12 +51,12 @@ const OurServices = (props: Props) => {
             >
                 <div></div>
                 <div></div>
-                <div className={styles.content}>
+                <div className={`content`}>
                     Website Designing & Development
                 </div>
             </motion.div>
 
-            <motion.div className={styles.parent2}
+            <motion.div className={`parent2`}
                 variants={fadeInAnimationVariants}
                 initial='initial'
                 animate='animate'
@@ -65,12 +65,12 @@ const OurServices = (props: Props) => {
             >
                 <div></div>
                 <div></div>
-                <div className={styles.content}>
+                <div className={`content`}>
                     Social Media Management
                 </div>
             </motion.div>
 
-            <motion.div className={styles.parent3}
+            <motion.div className={`parent3`}
                 variants={fadeInAnimationVariants}
                 initial='initial'
                 animate='animate'
@@ -79,12 +79,12 @@ const OurServices = (props: Props) => {
             >
                 <div></div>
                 <div></div>
-                <div className={styles.content}>
+                <div className={`content`}>
                     Search Engine Optimization
                 </div>
             </motion.div>
 
-            <motion.div className={styles.parent4}
+            <motion.div className={`parent4`}
                 variants={fadeInAnimationVariants}
                 initial='initial'
                 animate='animate'
@@ -93,7 +93,7 @@ const OurServices = (props: Props) => {
             >
                 <div></div>
                 <div></div>
-                <div className={styles.content}>
+                <div className={`content`}>
                     GRAPHIC DESIGNING
                 </div>
             </motion.div>

@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from './AboutUs.module.css'
+import './AboutUs.css'
 import localFont from 'next/font/local'
 const myFont = localFont({ src: 'GlacialIndifference-Regular.otf' })
 
@@ -13,9 +13,9 @@ type Props = {}
 
 const AboutUs = (props: Props) => {
   return (
-    <section id="aboutus" className={styles.about_us}>
-      <h2 className={styles.about_us__h2}>ABOUT US</h2>
-      <div className={styles.about_us__div}>
+    <section id="aboutus" className={`about_us`}>
+      <h2 className={`about_us__h2`}>ABOUT US</h2>
+      <div className={`about_us__div`}>
         <p>We are a <em className={josefin_Sans.className}>DIGITAL MARKETING AGENCY</em> led by <em className={josefin_Sans.className}>TRIO</em> a in
           Badlapur, Thane
         </p>

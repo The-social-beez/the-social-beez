@@ -1,7 +1,9 @@
 // import Link from 'next/link'
 "use client"
-
+import React, { useEffect, useRef, useState, RefObject } from 'react'
+import './Header.css'
 import { Montserrat } from 'next/font/google'
+
 const mont_serrat = Montserrat({
   subsets: ['latin'],
   weight: ['700']
@@ -18,9 +20,6 @@ const tiro_Devanagari_Marathi = Tiro_Devanagari_Marathi({
   subsets: ['latin'],
   weight: '400'
 })
-
-import React, { useEffect, useRef, useState, RefObject } from 'react'
-import styles from './Header.module.css'
 
 type headerProps = {}
 
@@ -53,15 +52,15 @@ export default function Header({ }: headerProps) {
   return (
     <section id="banner">
       <div ref={containerRef} onMouseMove={handleMove} onTouchStart={() => setIsMoving(true)} onTouchMove={handleTouchMove} onTouchEnd={() => setIsMoving(false)} className="h-[80vh] md:h-[100vh]">
-        <div style={{ width: `${leftWidth}%` }} className={styles.left_side}>
-          <h2 className={`${mont_serrat.className} ${styles.title}`}>KICKSTART YOUR<span className={`${permanent_Marker.className} ${styles.fancy}`}> BRAND </span>WITH THESOCIALBEEZ
+        <div style={{ width: `${leftWidth}%` }} className={`left_side`}>
+          <h2 className={`${mont_serrat.className} title`}>KICKSTART YOUR<span className={`${permanent_Marker.className} fancy`}> BRAND </span>WITH THESOCIALBEEZ
           </h2>
         </div>
 
-        <div className={styles.right_side}>
-          <h2 className={`${mont_serrat.className} ${styles.title}`}>
+        <div className={`right_side`}>
+          <h2 className={`${mont_serrat.className} title`}>
             KICKSTART YOUR
-            <span className={`${tiro_Devanagari_Marathi.className} ${styles.fancy}`}> ब्रँड </span>
+            <span className={`${tiro_Devanagari_Marathi.className} fancy`}> ब्रँड </span>
             WITH THESOCIALBEEZ
           </h2>
         </div>
