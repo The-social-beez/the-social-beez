@@ -8,13 +8,13 @@ export const metadata: Metadata = {
 
 export default function Page() {
     return (
-        <main className="bg-wheat">
-            <div id="bar" className="bg-[#fcb405] h-24">
+        <>
+            {/* <div id="bar" className="bg-[#fcb405] h-24"> */}
 
-            </div>
+            {/* </div> */}
             <div className="min-h-[28rem] container font-bold text-6xl text-center pt-32 uppercase text-gray-800 mx-auto">
                 <h1>Coming soon</h1>
             </div>
-        </main>
+        </>
     )
 }
